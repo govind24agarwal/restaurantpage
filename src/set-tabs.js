@@ -1,13 +1,15 @@
 function setTabs() {
   const tabs = document.querySelectorAll("[data-target]");
-  const contents = document.querySelectorAll("[data-content]");
+  const targets = document.querySelectorAll("[data-content]");
   tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
-      const target = document.querySelector(
+      const targetContent = document.querySelector(
         `[data-content=${e.target.dataset.target}]`
       );
-      contents.forEach((content) => content.classList.remove("active"));
-      target.classList.add("active");
+      tabs.forEach((tab) => tab.classList.remove("active"));
+      targets.forEach((target) => target.classList.remove("active"));
+      tab.classList.add("active");
+      targetContent.classList.add("active");
     });
   });
 }

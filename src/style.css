@@ -4,3 +4,18 @@
 .active[data-content] {
   display: block;
 }
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.nav li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.nav li.active {
+  background-color: teal;
+}
